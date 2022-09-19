@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+@mixin cust-theme($theme, $default1: null, $default2: null){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+
+  .mat-list .mat-list-item .mat-list-item-content {
+    color: mat.get-contrast-color-from-palette($accent, second-color) !important;
+  }
+}

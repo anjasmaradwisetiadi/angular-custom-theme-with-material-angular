@@ -1,0 +1,37 @@
+@use '~@angular/material' as mat;
+@import "~@angular/material/theming";
+/*
+@import "./custom-theme";
+*/
+
+@include mat.core();
+
+$theme-color: (
+  first-color: #ebdada,
+  second-color: #ffcccc,
+  third-color: #193c56,
+  50: #ebdada,
+  100: #daa79e,
+  200: #bf6d61,
+  300: #a43229,
+  400: #940001,
+  500: #830000,
+  600: #7d0000,
+  700: #730000,
+  800: #670000,
+  900: #530000,
+  contrast: (
+    first-color: black,
+    second-color: black,
+    third-color: white,
+  ),
+);
+.pink-theme {
+  $primary: mat.define-palette($theme-color, first-color);
+  $accent: mat.define-palette($theme-color, second-color);
+  $warn: mat.define-palette($theme-color, third-color);
+  $theme: mat.define-dark-theme($primary, $accent, $warn);
+
+  @include cust-theme($theme);
+/*  @include color-palette($theme);*/
+}
