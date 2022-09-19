@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Output() themeValue = new EventEmitter<any>();
 
+  themes = [
+    {
+      label: 'Murasaki',
+      value: 'murasaki-theme',
+    },
+    {
+      label: 'Pink',
+      value: 'pink-theme',
+    },
+    {
+      label: 'Freeze',
+      value: 'freezing-theme',
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  themeChange(params: any){
+    console.log('coba click')
+    console.log(params)
+    this.themeValue.emit(params.target.value)
+  }
 }
