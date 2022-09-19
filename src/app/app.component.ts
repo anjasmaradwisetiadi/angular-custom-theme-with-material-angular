@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  currentTheme = 'dark_theme'
+  currentTheme = 'pink-theme'
   constructor() {
   }
 

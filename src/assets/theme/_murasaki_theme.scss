@@ -27,7 +27,7 @@ $theme-color: (
   ),
 );
 
-.pink-theme {
+.murasaki-theme {
   $primary: mat.define-palette($theme-color, first-color);
   $accent: mat.define-palette($theme-color, second-color);
   $warn: mat.define-palette($theme-color);

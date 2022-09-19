@@ -6,7 +6,7 @@
 
   .mat-toolbar{
     color: mat.get-color-from-palette($primary, 300) !important;
-    background-color: mat.get-color-from-palette($accent, third-color) !important;
+    background-color: mat.get-color-from-palette($accent, second-color) !important;
     $border-color: mat.get-contrast-color-from-palette($warn, third-color);
     border-bottom: 10px solid rgba($border-color, 1) !important;
   }
@@ -15,5 +15,10 @@
     background-color: mat.get-color-from-palette($warn, third-color);
     height: 70vh;
   }
-  @include mat.all-component-themes($theme);
+
+  .contain-data{
+    background-color: mat.get-color-from-palette($warn, third-color);
+    height: 70vh;
+  }
+/*  @include mat.all-component-themes($theme);*/
 }
