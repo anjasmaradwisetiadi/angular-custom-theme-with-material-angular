@@ -4,7 +4,11 @@
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
-  .mat-list .mat-list-item .mat-list-item-content {
-    color: mat.get-contrast-color-from-palette($accent, second-color) !important;
+  .mat-toolbar{
+    color: mat.get-color-from-palette($primary, 300) !important;
+    background-color: mat.get-color-from-palette($accent, third-color) !important;
+    $border-color: mat.get-contrast-color-from-palette($warn, default-color);
+    border-bottom: 10px solid rgba($border-color, 1) !important;
   }
+
 }
