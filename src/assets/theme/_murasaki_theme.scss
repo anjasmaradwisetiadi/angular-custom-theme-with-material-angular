@@ -5,25 +5,28 @@
 @include mat.core();
 
 $theme-color: (
-  first-color: #ebdada,
-  second-color: #ffcccc,
-  third-color: #193c56,
-  50: #ebdada,
-  100: #daa79e,
-  200: #bf6d61,
-  300: #a43229,
-  400: #940001,
-  500: #830000,
-  600: #7d0000,
-  700: #730000,
-  800: #670000,
-  900: #530000,
+  first-color: #2B1D34,
+  second-color: #452F5B,
+  third-color: #ffac40,
+  default-color: #ffffff,
+  50: #f4e6ef,
+  100: #d5c5d4,
+  200: #b3a0b4,
+  300: #947c93,
+  400: #7d617d,
+  500: #674667,
+  600: #5b3e5d,
+  700: #4c334f,
+  800: #3b2942,
+  900: #2b1d34,
   contrast: (
-    first-color: black,
-    second-color: black,
+    first-color: white,
+    second-color: white,
     third-color: white,
+    default-color: black,
   ),
 );
+
 .pink-theme {
   $primary: mat.define-palette($theme-color, first-color);
   $accent: mat.define-palette($theme-color, second-color);
@@ -31,5 +34,4 @@ $theme-color: (
   $theme: mat.define-dark-theme($primary, $accent, $warn);
 
   @include cust-theme($theme);
-/*  @include color-palette($theme);*/
 }
