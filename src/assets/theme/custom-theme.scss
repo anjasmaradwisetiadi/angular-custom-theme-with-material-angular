@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @mixin cust-theme($theme, $default1: null, $default2: null){
+  // start #3 theme implement on component angular
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
@@ -26,6 +27,12 @@
     font-size: 32px;
     text-transform: uppercase;
   }
+  mat-icon,
+  .icon-color-theme {
+    color: mat.get-color-from-palette($warn, 500) !important;
+    fill: mat.get-color-from-palette($warn, 500) !important;
+    font-size: 100px !important;
+  }
 
   p{
     color: mat.get-contrast-color-from-palette($warn, first-color) !important;
@@ -39,5 +46,6 @@
   {
     color: mat.get-contrast-color-from-palette($warn, second-color) !important;
   }
-/*  @include mat.all-component-themes($theme);*/
+  /*  @include mat.all-component-themes($theme);*/
+  // end #3 theme implement on component angular
 }

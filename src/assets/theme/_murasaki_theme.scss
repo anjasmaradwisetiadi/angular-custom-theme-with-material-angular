@@ -1,3 +1,4 @@
+// start # 1 struktur dan penggunaan pallete warna
 @use '@angular/material' as mat;
 @import "~@angular/material/theming";
 @import "custom-theme";
@@ -26,7 +27,9 @@ $theme-color: (
     default-color: black,
   ),
 );
+// start # 1 struktur dan penggunaan pallete warna
 
+// strat # 2 initialize theme will be used
 .murasaki-theme {
   $primary: mat.define-palette($theme-color, first-color);
   $accent: mat.define-palette($theme-color, second-color);
@@ -35,3 +38,4 @@ $theme-color: (
 
   @include cust-theme($theme);
 }
+// end # 2 initialize theme will be used
