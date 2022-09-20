@@ -77,6 +77,7 @@ $warn-color: (
   $warn: mat.define-palette($warn-color);
   $theme: mat.define-dark-theme($primary, $accent, $warn);
 
-  @include cust-theme($theme);
+  @include cust-theme($theme, true, true);
 /*  @include color-palette($theme);*/
 }
+

@@ -12,6 +12,10 @@
     border-bottom: 10px solid rgba($border-color, 1) !important;
   }
 
+  mat-error{
+    color: mat.get-color-from-palette($warn, third-color) !important;
+  }
+
   h1,
   h2, 
   h3,
@@ -47,6 +51,21 @@
     color: mat.get-contrast-color-from-palette($warn, first-color) !important;
   }
 
-  /*  @include mat.all-component-themes($theme);*/
+  @if $default1 {
+    button.primary{
+      background-color: mat.get-color-from-palette($primary, 800) !important;
+      color: mat.get-contrast-color-from-palette($primary, third-color) !important;
+    }
+    button.accent{
+      background-color: mat.get-color-from-palette($accent, 800) !important;
+      color: mat.get-contrast-color-from-palette($accent, third-color) !important;
+    }
+    button.warn {
+      background-color: mat.get-color-from-palette($warn, 800) !important;
+      color: mat.get-contrast-color-from-palette($warn, third-color) !important;
+    }
+  }
+/*    @include mat.all-component-themes($theme); */
   // end #3 theme implement on component angular
+
 }
