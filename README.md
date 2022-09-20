@@ -1,7 +1,7 @@
 # CustomThemingAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
-
+This project for riset and learning how to custom theme and typhograpy on angular material 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
