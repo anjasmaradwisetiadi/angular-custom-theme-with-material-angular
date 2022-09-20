@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+@import "~@angular/material/theming";
+@import "custom-theme";
+
+@include mat.core();
+
+$primary-color: (
+    first-color: #69bdee,
+    second-color: #d8f0ff ,
+    third-color: #000000,
+    50: #d8f0ff,
+    100: #a3d8f8,
+    200: #69bdee,
+    300: #25a4e3,
+    400: #0092dc,
+    500: #0080d3,
+    600: #0074c5,
+    700: #0063b2,
+    800: #00539d,
+    900: #00347b,
+    contrast: (
+        first-color: black,
+        second-color: black,
+        third-color: white,
+    ),
+);
+
+$accent-color: (
+    first-color: #f0f3f9,
+    second-color: #f8f8f9,
+    third-color: #2c16e7,
+    50: #f0f3f9,
+    100: #dae2eb,
+    200: #c4cedc,
+    300: #acbacc,
+    400: #99a9be,
+    500: #8698b0,
+    600: #77889e,
+    700: #657385,
+    800: #55606e,
+    900: #414a55,
+    contrast: (
+      first-color: black,
+      second-color: black,
+      third-color: white,
+    ),
+);
+
+$warn-color: (
+    first-color: #f0f3f9,
+    second-color: #f8f8f9,
+    third-color: #ff1744,
+    50: #ffebee,
+    100: #ffcdd2,
+    200: #ef9a9a,
+    300: #e57373,
+    400: #ef5350,
+    500: #f44336,
+    600: #e53935,
+    700: #d32f2f,
+    800: #c62828,
+    900: #b71c1c,
+    A100: #ff8a80,
+    A200: #ff5252,
+    A400: #ff1744,
+    A700: #d50000,
+    contrast: (
+      first-color: white,
+      second-color: white,
+      third-color: black,
+    ),
+);
+
+.maker-theme {
+  $primary: mat.define-palette($primary-color);
+  $accent: mat.define-palette($accent-color);
+  $warn: mat.define-palette($warn-color);
+  $theme: mat.define-dark-theme($primary, $accent, $warn);
+
+  @include cust-theme($theme);
+/*  @include color-palette($theme);*/
+}

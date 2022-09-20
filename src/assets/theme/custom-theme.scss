@@ -12,13 +12,22 @@
     border-bottom: 10px solid rgba($border-color, 1) !important;
   }
 
-  .root{
-    background-color: mat.get-color-from-palette($warn, third-color);
-    height: 70vh;
+  h1,
+  h2, 
+  h3,
+  h4,
+  h5,
+  {
+    color: mat.get-contrast-color-from-palette($warn, second-color) !important;
   }
+/* 
+  .root{
+    background-color: mat.get-color-from-palette($primary, first-color);
+    height: 70vh;
+  } */
 
   .contain-data{
-    background-color: mat.get-color-from-palette($warn, third-color);
+    background-color: mat.get-color-from-palette($primary, first-color);
     height: 70vh;
     padding: 2rem;
   }
@@ -38,14 +47,6 @@
     color: mat.get-contrast-color-from-palette($warn, first-color) !important;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  {
-    color: mat.get-contrast-color-from-palette($warn, second-color) !important;
-  }
   /*  @include mat.all-component-themes($theme);*/
   // end #3 theme implement on component angular
 }

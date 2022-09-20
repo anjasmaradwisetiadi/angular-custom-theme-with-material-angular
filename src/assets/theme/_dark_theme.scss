@@ -33,12 +33,7 @@ $theme-color: (
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 /*$custom-theming-angular-primary: mat.define-palette(mat.$cyan-palette);*/
-/*
-$custom-theming-angular-primary: mat.define-palette($theme-color, third-color);
-$custom-theming-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-// The warn palette is optional (defaults to red).
-$custom-theming-angular-warn: mat.define-palette(mat.$red-palette);
-*/
+
 
 
 
@@ -50,27 +45,36 @@ $custom-theming-angular-warn: mat.define-palette(mat.$red-palette);
   border-bottom: 10px solid rgba($border-color, 1);
 }*/
 
+
 //creating your theme
 /*$custom-theme: mat-light-theme($custom-theming-angular-primary, $custom-theming-angular-accent, $custom-theming-angular-warn);*/
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-/*$custom-theming-angular-theme: mat.define-light-theme((
+
+$custom-theming-angular-primary: mat.define-palette($theme-color, third-color);
+$custom-theming-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$custom-theming-angular-warn: mat.define-palette(mat.$red-palette);
+
+$custom-theming-angular-theme: mat.define-light-theme((
   color: (
     primary: $custom-theming-angular-primary,
     accent: $custom-theming-angular-accent,
     warn: $custom-theming-angular-warn,
   )
-));*/
+));
+
+// that you are using.
+@include mat.all-component-themes($custom-theming-angular-theme);
 
 // Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-/*@include mat.all-component-themes($custom-theming-angular-theme);*/
 
-$primary: mat.define-palette($theme-color);
+
+
+/* $primary: mat.define-palette($theme-color);
 $accent: mat.define-palette($theme-color);
 $warn: mat.define-palette($theme-color);
-$theme: mat.define-dark-theme($primary, $accent, $warn);
+$theme: mat.define-dark-theme($primary, $accent, $warn); */
 
 /*  @include color-palette($theme);*/
-@include cust-theme($theme, true, true);
+/* @include cust-theme($theme, true, true); */
