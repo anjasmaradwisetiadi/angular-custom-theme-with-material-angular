@@ -1,6 +1,7 @@
 # CustomThemingAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+this project is learning and riset how to custom theme and typhography use angular material
 
 ## Development server
 
