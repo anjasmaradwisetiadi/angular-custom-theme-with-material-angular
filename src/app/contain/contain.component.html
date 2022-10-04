@@ -1,28 +1,24 @@
 <div class="contain-data">
-  <div class="example-button-row">
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
-    <button mat-raised-button disabled>Disabled</button>
-    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-  <h3>
-    more better selection
-  </h3>
+  <mat-card class="primary">Simple card</mat-card>
   <h2>
-    stablizier
+    more better selection
   </h2>
-  <p>
-    anak ayam turun gunung
-  </p>
   <p>
     <mat-icon style="height: 100px; width: 100px">
       local_movies
     </mat-icon>
   </p>
-  <mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
+  <div class="example-form"  [formGroup]="mainFormAll">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com">
+      <mat-error
+        *ngIf="
+        mainFormAll?.get('emailFormControl').hasError('required') &&
+        (mainFormAll?.get('emailFormControl')?.dirty || mainFormAll?.get('emailFormControl')?.touched)
+        ">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+  </div>
 </div>
