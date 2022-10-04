@@ -5,6 +5,12 @@
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
+  .contain{
+    background-color: mat.get-color-from-palette($primary, first-color);
+    height: 70vh;
+    padding: 2rem;
+  }
+
   .mat-toolbar {
     color: mat.get-color-from-palette($primary, 300) !important;
     background-color: mat.get-color-from-palette($accent, third-color) !important;
@@ -30,16 +36,18 @@
     color: mat.get-contrast-color-from-palette($warn, second-color) !important;
   }
 
-  .contain-data{
-    background-color: mat.get-color-from-palette($primary, first-color);
-    height: 70vh;
-    padding: 2rem;
-  }
-
   .font-size-huge{
     font-size: 32px;
     text-transform: uppercase;
   }
+
+  .mat-form-field{
+    color: mat.get-contrast-color-from-palette($warn, first-color) !important;
+    &.mat-form-field-underline .mat-form-field-appearance-fill .mat-form-field-underline:before {
+      color: red;
+    }
+  }
+
   mat-icon,
   .icon-color-theme {
     color: mat.get-color-from-palette($warn, 500) !important;
@@ -53,15 +61,15 @@
 
   @if $default1 {
     button.primary{
-      background-color: mat.get-color-from-palette($primary, 800) !important;
-      color: mat.get-contrast-color-from-palette($primary, third-color) !important;
+      background-color: mat.get-color-from-palette($primary, 200) !important;
+      color: mat.get-contrast-color-from-palette($primary, first-color) !important;
     }
     button.accent{
-      background-color: mat.get-color-from-palette($accent, 800) !important;
+      background-color: mat.get-color-from-palette($accent, third-color) !important;
       color: mat.get-contrast-color-from-palette($accent, third-color) !important;
     }
     button.warn {
-      background-color: mat.get-color-from-palette($warn, 800) !important;
+      background-color: mat.get-color-from-palette($warn, default-color) !important;
       color: mat.get-contrast-color-from-palette($warn, third-color) !important;
     }
   }

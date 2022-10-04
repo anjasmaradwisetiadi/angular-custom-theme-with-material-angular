@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-navbar',
@@ -29,8 +28,6 @@ export class NavbarComponent implements OnInit {
   }
 
   themeChange(params: any){
-    console.log('coba click')
-    console.log(params)
     this.themeValue.emit(params.target.value)
   }
 }

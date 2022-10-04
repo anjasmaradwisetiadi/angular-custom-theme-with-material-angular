@@ -1,5 +1,4 @@
 @use '@angular/material' as mat;
-@import "~@angular/material/theming";
 @import "custom-theme";
 
 @include mat.core();
@@ -78,6 +77,5 @@ $warn-color: (
   $theme: mat.define-dark-theme($primary, $accent, $warn);
 
   @include cust-theme($theme, true, true);
-/*  @include color-palette($theme);*/
 }
 
