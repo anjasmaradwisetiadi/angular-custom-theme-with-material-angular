@@ -1,23 +1,10 @@
 
 @use '@angular/material' as mat;
-/* @import "assets/theme/dark_theme"; */
+/* @import "assets/theme/dark_theme";*/
 @import "assets/theme/pink_theme";
 @import "assets/theme/murasaki_theme";
 @import "assets/theme/maker_theme";
-/*@import "assets/theme/dark_theme" as themeCustom;*/
 
-// Plus imports for other components in your app.
-
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-
-/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
-
-//updating main theme
-/*@include angular-material-theme($custom-theme);*/

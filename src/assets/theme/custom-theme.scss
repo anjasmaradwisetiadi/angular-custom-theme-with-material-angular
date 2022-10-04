@@ -1,15 +1,20 @@
 @use '@angular/material' as mat;
 @mixin cust-theme($theme, $default1: null, $default2: null){
-  // start #3 theme implement on component angular
+
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
-  .mat-toolbar{
+  .mat-toolbar {
     color: mat.get-color-from-palette($primary, 300) !important;
-    background-color: mat.get-color-from-palette($accent, second-color) !important;
-    $border-color: mat.get-contrast-color-from-palette($warn, third-color);
-    border-bottom: 10px solid rgba($border-color, 1) !important;
+    background-color: mat.get-color-from-palette($accent, third-color) !important;
+    $border-color: mat.get-contrast-color-from-palette($warn, second-color);
+    border-bottom: 2px solid rgba($border-color, 1) !important;
+  }
+
+  .mat-card{
+    background-color: mat.get-color-from-palette($primary, 50) !important;
+    $border-color: mat.get-contrast-color-from-palette($warn, second-color);
   }
 
   mat-error{
@@ -17,18 +22,13 @@
   }
 
   h1,
-  h2, 
+  h2,
   h3,
   h4,
   h5,
   {
     color: mat.get-contrast-color-from-palette($warn, second-color) !important;
   }
-/* 
-  .root{
-    background-color: mat.get-color-from-palette($primary, first-color);
-    height: 70vh;
-  } */
 
   .contain-data{
     background-color: mat.get-color-from-palette($primary, first-color);
@@ -65,7 +65,5 @@
       color: mat.get-contrast-color-from-palette($warn, third-color) !important;
     }
   }
-/*    @include mat.all-component-themes($theme); */
-  // end #3 theme implement on component angular
 
 }
