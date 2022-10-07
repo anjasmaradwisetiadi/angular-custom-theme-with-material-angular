@@ -5,6 +5,26 @@
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
 
+  .contain{
+    background-color: mat.get-color-from-palette($primary, first-color);
+    height: 70vh;
+    padding: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  {
+    color: mat.get-contrast-color-from-palette($warn, second-color) !important;
+  }
+  
+  p{
+    color: mat.get-contrast-color-from-palette($warn, first-color) !important;
+  }
+  
+
   .mat-toolbar {
     color: mat.get-color-from-palette($primary, 300) !important;
     background-color: mat.get-color-from-palette($accent, third-color) !important;
@@ -18,15 +38,6 @@
   }
 
   mat-error{
-    color: mat.get-color-from-palette($warn, third-color) !important;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  {
     color: mat.get-contrast-color-from-palette($warn, second-color) !important;
   }
 
@@ -40,15 +51,33 @@
     font-size: 32px;
     text-transform: uppercase;
   }
+
+/*   .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+  } */
+
+  .example-form{
+    background-color: cornflowerblue;
+    padding: 1rem;
+  }
+
+  /* custom inut form field */
+  .mat-form-field-infix input::placeholder{
+    color: mat.get-contrast-color-from-palette($warn, 900) !important;
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    $border-color: mat.get-color-from-palette($primary, first-color);
+    border-bottom: 2px solid $border-color;
+  }
+  /* custom inut form field end*/
+
+  /* custom icon */
   mat-icon,
   .icon-color-theme {
     color: mat.get-color-from-palette($warn, 500) !important;
     fill: mat.get-color-from-palette($warn, 500) !important;
     font-size: 100px !important;
-  }
-
-  p{
-    color: mat.get-contrast-color-from-palette($warn, first-color) !important;
   }
 
   @if $default1 {
